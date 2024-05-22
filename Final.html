@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+
+    
+        <meta name="date" content="2024-05-22" />
+    
+    <title>Seminar of Inferential Statistics</title>
+
+        <script src="Final_files/header-attrs-2.27/header-attrs.js"></script>
+        <script src="Final_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="Final_files/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="Final_files/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="Final_files/navigation-1.1/tabsets.js"></script>
+        <script src="Final_files/navigation-1.1/codefolding.js"></script>
+        <link href="Final_files/readthedown-0.1/readthedown.css" rel="stylesheet" />
+        <link href="Final_files/readthedown-0.1/readthedown_fonts_embed.css" rel="stylesheet" />
+        <script src="Final_files/readthedown-0.1/readthedown.js"></script>
+    
+    
+        <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+          color: #aaaaaa;
+        }
+      pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+      div.sourceCode
+        {  background-color: #f8f8f8; }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+      code span.al { color: #ef2929; } /* Alert */
+      code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+      code span.at { color: #204a87; } /* Attribute */
+      code span.bn { color: #0000cf; } /* BaseN */
+      code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+      code span.ch { color: #4e9a06; } /* Char */
+      code span.cn { color: #8f5902; } /* Constant */
+      code span.co { color: #8f5902; font-style: italic; } /* Comment */
+      code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+      code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+      code span.dt { color: #204a87; } /* DataType */
+      code span.dv { color: #0000cf; } /* DecVal */
+      code span.er { color: #a40000; font-weight: bold; } /* Error */
+      code span.ex { } /* Extension */
+      code span.fl { color: #0000cf; } /* Float */
+      code span.fu { color: #204a87; font-weight: bold; } /* Function */
+      code span.im { } /* Import */
+      code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+      code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+      code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+      code span.ot { color: #8f5902; } /* Other */
+      code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+      code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+      code span.ss { color: #4e9a06; } /* SpecialString */
+      code span.st { color: #4e9a06; } /* String */
+      code span.va { color: #000000; } /* Variable */
+      code span.vs { color: #4e9a06; } /* VerbatimString */
+      code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+    </style>
+    
+    
+    <!-- tabsets -->
+    <script>
+      $(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $(document).ready(function () {
+	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
+
+    <!-- code folding -->
+        <script>
+      $(document).ready(function () {
+	  	  	  window.initializeCodeFolding("show" === "show");
+	        });
+    </script>
+    
+    <!-- code download -->
+    
+    <!-- tabsets dropdown -->
+
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
+
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+    
+</head>
+
+<body class="preload">
+
+   	
+         <!-- readthedown start -->   
+   <div id="content" data-toggle="wy-nav-shift">
+     <nav id="nav-top" role="navigation" aria-label="top navigation">
+       <a role="button" href="#" data-toggle="wy-nav-top"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+     </nav>
+         
+      <div class="btn-group pull-right">
+     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+     <ul class="dropdown-menu" style="min-width: 50px;">
+	    	    <li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+	    <li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+	    	    	         </ul>
+   </div>
+   
+        
+      <h1 class="title">Seminar of Inferential Statistics</h1>
+      
+         <!-- readthedown authors -->
+   <div id="sidebar">
+    <h2><a href="#content">Seminar of Inferential Statistics</a></h2>
+    <div id="toc">
+      <ul>
+      <li><a href="#data-cleaning-and-processing"
+      id="toc-data-cleaning-and-processing"><span
+      class="toc-section-number">1</span> Data Cleaning and
+      Processing</a></li>
+      <li><a href="#data-visualisation"
+      id="toc-data-visualisation"><span
+      class="toc-section-number">2</span> Data Visualisation</a>
+      <ul>
+      <li><a href="#categorical-variables"
+      id="toc-categorical-variables"><span
+      class="toc-section-number">2.1</span> Categorical
+      Variables</a></li>
+      <li><a href="#continuous-variables"
+      id="toc-continuous-variables"><span
+      class="toc-section-number">2.2</span> Continuous
+      Variables</a></li>
+      </ul></li>
+      <li><a href="#test-train-split" id="toc-test-train-split"><span
+      class="toc-section-number">3</span> Test-Train Split</a></li>
+      <li><a href="#select-key-variables-using-random-forest"
+      id="toc-select-key-variables-using-random-forest"><span
+      class="toc-section-number">4</span> Select Key Variables Using
+      Random Forest</a></li>
+      <li><a href="#comparative-analysis-of-various-methods"
+      id="toc-comparative-analysis-of-various-methods"><span
+      class="toc-section-number">5</span> Comparative Analysis of
+      Various Methods</a>
+      <ul>
+      <li><a href="#logistic-regression"
+      id="toc-logistic-regression"><span
+      class="toc-section-number">5.1</span> Logistic Regression</a></li>
+      <li><a href="#decision-tree" id="toc-decision-tree"><span
+      class="toc-section-number">5.2</span> Decision Tree</a></li>
+      <li><a href="#random-forest" id="toc-random-forest"><span
+      class="toc-section-number">5.3</span> Random Forest</a></li>
+      <li><a href="#k-nearest-neighbours"
+      id="toc-k-nearest-neighbours"><span
+      class="toc-section-number">5.4</span> K-Nearest
+      Neighbours</a></li>
+      <li><a href="#neural-network" id="toc-neural-network"><span
+      class="toc-section-number">5.5</span> Neural Network</a></li>
+      <li><a href="#adaboost" id="toc-adaboost"><span
+      class="toc-section-number">5.6</span> Adaboost</a></li>
+      </ul></li>
+      </ul>
+    </div>
+    <div id="postamble" data-toggle="wy-nav-shift" class="status">
+                  <p class="author"><span class="glyphicon glyphicon-user"></span> Alicia
+Teo and Piraveen Ganeshalingam
+		      </p>
+                        <p class="date"><span class="glyphicon glyphicon-calendar"></span> 2024-05-22</p>
+          </div>
+   </div>
+     
+
+   
+      
+   
+<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+<div id="main">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(nnet)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fu">library</span>(partykit)</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="fu">library</span>(ggcorrplot)</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="fu">library</span>(gmodels)</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="fu">library</span>(ISLR2)</span></code></pre></div>
+<div id="data-cleaning-and-processing" class="section level1"
+number="1">
+<h1><span class="header-section-number">1</span> Data Cleaning and
+Processing</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># setwd(&quot;/Users/piraveendupont/Desktop&quot;)</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co"># setwd(&quot;C:/Users/Alicia/Documents/Unine/Applied Statistics/Homework German Credit&quot;)</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;GermanCredit.csv&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co"># remove first column</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#keep education binary(remove -1)</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[df<span class="sc">$</span>EDUCATION <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), ]</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co"># remove age outlier 120 years --&gt; change it to 51 years old</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>df<span class="sc">$</span>AGE[df<span class="sc">$</span>AGE <span class="sc">&gt;</span> <span class="dv">100</span>] <span class="ot">&lt;-</span> <span class="dv">51</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co"># keep guarantor binary --&gt; change extra value to 0</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>df<span class="sc">$</span>GUARANTOR[<span class="sc">!</span>df<span class="sc">$</span>GUARANTOR <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co"># Change permanent resident scale</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>df<span class="sc">$</span>PRESENT_RESIDENT <span class="ot">=</span> df<span class="sc">$</span>PRESENT_RESIDENT <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="fu">nrow</span>(df)</span></code></pre></div>
+<pre><code>## [1] 999</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">summary</span>(df)</span></code></pre></div>
+<pre><code>##     CHK_ACCT        DURATION        HISTORY         NEW_CAR      
+##  Min.   :0.000   Min.   : 4.00   Min.   :0.000   Min.   :0.0000  
+##  1st Qu.:0.000   1st Qu.:12.00   1st Qu.:2.000   1st Qu.:0.0000  
+##  Median :1.000   Median :18.00   Median :2.000   Median :0.0000  
+##  Mean   :1.576   Mean   :20.88   Mean   :2.544   Mean   :0.2342  
+##  3rd Qu.:3.000   3rd Qu.:24.00   3rd Qu.:4.000   3rd Qu.:0.0000  
+##  Max.   :3.000   Max.   :72.00   Max.   :4.000   Max.   :1.0000  
+##     USED_CAR        FURNITURE         RADIO.TV        EDUCATION      
+##  Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+##  1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.00000  
+##  Median :0.0000   Median :0.0000   Median :0.0000   Median :0.00000  
+##  Mean   :0.1031   Mean   :0.1812   Mean   :0.2803   Mean   :0.04905  
+##  3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.00000  
+##  Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.00000  
+##    RETRAINING         AMOUNT         SAV_ACCT       EMPLOYMENT   
+##  Min.   :0.0000   Min.   :  250   Min.   :0.000   Min.   :0.000  
+##  1st Qu.:0.0000   1st Qu.: 1365   1st Qu.:0.000   1st Qu.:2.000  
+##  Median :0.0000   Median : 2319   Median :0.000   Median :2.000  
+##  Mean   :0.0971   Mean   : 3268   Mean   :1.106   Mean   :2.384  
+##  3rd Qu.:0.0000   3rd Qu.: 3969   3rd Qu.:2.000   3rd Qu.:4.000  
+##  Max.   :1.0000   Max.   :18424   Max.   :4.000   Max.   :4.000  
+##   INSTALL_RATE      MALE_DIV        MALE_SINGLE     MALE_MAR_or_WID  
+##  Min.   :1.000   Min.   :0.00000   Min.   :0.0000   Min.   :0.00000  
+##  1st Qu.:2.000   1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0.00000  
+##  Median :3.000   Median :0.00000   Median :1.0000   Median :0.00000  
+##  Mean   :2.975   Mean   :0.05005   Mean   :0.5475   Mean   :0.09209  
+##  3rd Qu.:4.000   3rd Qu.:0.00000   3rd Qu.:1.0000   3rd Qu.:0.00000  
+##  Max.   :4.000   Max.   :1.00000   Max.   :1.0000   Max.   :1.00000  
+##   CO.APPLICANT       GUARANTOR       PRESENT_RESIDENT  REAL_ESTATE    
+##  Min.   :0.00000   Min.   :0.00000   Min.   :0.000    Min.   :0.0000  
+##  1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:1.000    1st Qu.:0.0000  
+##  Median :0.00000   Median :0.00000   Median :2.000    Median :0.0000  
+##  Mean   :0.04104   Mean   :0.05105   Mean   :1.845    Mean   :0.2823  
+##  3rd Qu.:0.00000   3rd Qu.:0.00000   3rd Qu.:3.000    3rd Qu.:1.0000  
+##  Max.   :1.00000   Max.   :1.00000   Max.   :3.000    Max.   :1.0000  
+##  PROP_UNKN_NONE        AGE        OTHER_INSTALL         RENT       
+##  Min.   :0.0000   Min.   :19.00   Min.   :0.0000   Min.   :0.0000  
+##  1st Qu.:0.0000   1st Qu.:27.00   1st Qu.:0.0000   1st Qu.:0.0000  
+##  Median :0.0000   Median :33.00   Median :0.0000   Median :0.0000  
+##  Mean   :0.1532   Mean   :35.53   Mean   :0.1852   Mean   :0.1792  
+##  3rd Qu.:0.0000   3rd Qu.:42.00   3rd Qu.:0.0000   3rd Qu.:0.0000  
+##  Max.   :1.0000   Max.   :75.00   Max.   :1.0000   Max.   :1.0000  
+##     OWN_RES        NUM_CREDITS         JOB        NUM_DEPENDENTS 
+##  Min.   :0.0000   Min.   :1.000   Min.   :0.000   Min.   :1.000  
+##  1st Qu.:0.0000   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:1.000  
+##  Median :1.0000   Median :1.000   Median :2.000   Median :1.000  
+##  Mean   :0.7137   Mean   :1.407   Mean   :1.904   Mean   :1.155  
+##  3rd Qu.:1.0000   3rd Qu.:2.000   3rd Qu.:2.000   3rd Qu.:1.000  
+##  Max.   :1.0000   Max.   :4.000   Max.   :3.000   Max.   :2.000  
+##    TELEPHONE         FOREIGN           RESPONSE     
+##  Min.   :0.0000   Min.   :0.00000   Min.   :0.0000  
+##  1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.0000  
+##  Median :0.0000   Median :0.00000   Median :1.0000  
+##  Mean   :0.4034   Mean   :0.03704   Mean   :0.6997  
+##  3rd Qu.:1.0000   3rd Qu.:0.00000   3rd Qu.:1.0000  
+##  Max.   :1.0000   Max.   :1.00000   Max.   :1.0000</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>cols <span class="ot">=</span> <span class="fu">names</span>(df)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>continuous <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;DURATION&quot;</span>, <span class="st">&quot;AMOUNT&quot;</span>, <span class="st">&quot;AGE&quot;</span>)  </span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>categorical <span class="ot">&lt;-</span> cols[<span class="sc">!</span>cols <span class="sc">%in%</span> continuous] <span class="co"># Response is here</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">mutate_at</span>(<span class="fu">vars</span>(categorical), factor)</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
+<pre><code>##   CHK_ACCT DURATION HISTORY NEW_CAR USED_CAR FURNITURE RADIO.TV EDUCATION
+## 1        0        6       4       0        0         0        1         0
+## 2        1       48       2       0        0         0        1         0
+## 3        3       12       4       0        0         0        0         1
+## 4        0       42       2       0        0         1        0         0
+## 5        0       24       3       1        0         0        0         0
+## 6        3       36       2       0        0         0        0         1
+##   RETRAINING AMOUNT SAV_ACCT EMPLOYMENT INSTALL_RATE MALE_DIV MALE_SINGLE
+## 1          0   1169        4          4            4        0           1
+## 2          0   5951        0          2            2        0           0
+## 3          0   2096        0          3            2        0           1
+## 4          0   7882        0          3            2        0           1
+## 5          0   4870        0          2            3        0           1
+## 6          0   9055        4          2            2        0           1
+##   MALE_MAR_or_WID CO.APPLICANT GUARANTOR PRESENT_RESIDENT REAL_ESTATE
+## 1               0            0         0                3           1
+## 2               0            0         0                1           1
+## 3               0            0         0                2           1
+## 4               0            0         1                3           0
+## 5               0            0         0                3           0
+## 6               0            0         0                3           0
+##   PROP_UNKN_NONE AGE OTHER_INSTALL RENT OWN_RES NUM_CREDITS JOB NUM_DEPENDENTS
+## 1              0  67             0    0       1           2   2              1
+## 2              0  22             0    0       1           1   2              1
+## 3              0  49             0    0       1           1   1              2
+## 4              0  45             0    0       0           1   2              2
+## 5              1  53             0    0       0           2   2              2
+## 6              1  35             0    0       0           1   1              2
+##   TELEPHONE FOREIGN RESPONSE
+## 1         1       0        1
+## 2         0       0        0
+## 3         0       0        1
+## 4         0       0        1
+## 5         0       0        0
+## 6         1       0        1</code></pre>
+</div>
+<div id="data-visualisation" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Data Visualisation</h1>
+<div id="categorical-variables" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Categorical
+Variables</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Categorical variables plotted with response</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>categorical_data <span class="ot">&lt;-</span> df[, categorical]</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>last_var<span class="ot">=</span><span class="fu">length</span>(categorical_data)<span class="sc">-</span><span class="dv">1</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> <span class="fu">names</span>(categorical_data)[<span class="dv">1</span><span class="sc">:</span>last_var]) {</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  <span class="cf">if</span> (variable <span class="sc">!=</span> <span class="st">&quot;Response&quot;</span>) {</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>    <span class="fu">plot</span>(categorical_data[[variable]] <span class="sc">~</span> categorical_data<span class="sc">$</span>RESPONSE, <span class="at">main =</span> <span class="fu">paste</span>(variable), <span class="at">xlab =</span> <span class="st">&quot;Response&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;&quot;</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>  }</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>}</span></code></pre></div>
+<p><img src="Final_files/figure-html/Mosiac%20Plots%20Categorical%20Data-1.png" width="768" /><img src="Final_files/figure-html/Mosiac%20Plots%20Categorical%20Data-2.png" width="768" /><img src="Final_files/figure-html/Mosiac%20Plots%20Categorical%20Data-3.png" width="768" /><img src="Final_files/figure-html/Mosiac%20Plots%20Categorical%20Data-4.png" width="768" /><img src="Final_files/figure-html/Mosiac%20Plots%20Categorical%20Data-5.png" width="768" /></p>
+</div>
+<div id="continuous-variables" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Continuous
+Variables</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> continuous) {</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  <span class="fu">boxplot</span>(df[[variable]] <span class="sc">~</span> df<span class="sc">$</span>RESPONSE, </span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>          <span class="at">data =</span> df,</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>          <span class="at">ylab =</span> <span class="st">&quot;RESPONSE&quot;</span>, <span class="at">xlab =</span> variable,</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>          <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">&quot;Boxplot of&quot;</span>, variable, <span class="st">&quot;by RESPONSE&quot;</span>),</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>          <span class="at">horizontal =</span> T)</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>}</span></code></pre></div>
+<p><img src="Final_files/figure-html/Boxplots%20Continuous%20Data-1.png" width="768" /><img src="Final_files/figure-html/Boxplots%20Continuous%20Data-2.png" width="768" /><img src="Final_files/figure-html/Boxplots%20Continuous%20Data-3.png" width="768" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> continuous) {</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes_string</span>(<span class="at">x =</span> col, <span class="at">fill =</span> <span class="st">&quot;RESPONSE&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>    <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>    <span class="fu">ggtitle</span>(<span class="fu">paste</span>(<span class="st">&quot;Density Plot of&quot;</span>, col)) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>    <span class="fu">xlab</span>(col) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">&quot;Density&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes_string</span>(<span class="at">xintercept =</span> <span class="fu">paste0</span>(<span class="st">&quot;mean(&quot;</span>, col, <span class="st">&quot;, na.rm = TRUE)&quot;</span>)), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">size =</span> <span class="fl">0.5</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>  <span class="fu">print</span>(p)</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>}</span></code></pre></div>
+<p><img src="Final_files/figure-html/Density%20Plots%20Continuous%20Data-1.png" width="768" /><img src="Final_files/figure-html/Density%20Plots%20Continuous%20Data-2.png" width="768" /><img src="Final_files/figure-html/Density%20Plots%20Continuous%20Data-3.png" width="768" /></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>continuous_data <span class="ot">&lt;-</span> df[, continuous]</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">pairs.panels</span>(continuous_data[, ])</span></code></pre></div>
+<p><img src="Final_files/figure-html/Correlation%20Plots%20Continuous%20Data-1.png" width="768" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># positive correlation between duration and amount</span></span></code></pre></div>
+</div>
+</div>
+<div id="test-train-split" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Test-Train Split</h1>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(df<span class="sc">$</span>RESPONSE)) <span class="co"># proportion = 0.7 </span></span></code></pre></div>
+<pre><code>## 
+##         0         1 
+## 0.3003003 0.6996997</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>val_index <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(df<span class="sc">$</span>RESPONSE, <span class="at">p=</span><span class="fl">0.7</span>, <span class="at">list=</span><span class="cn">FALSE</span>) <span class="co"># change p = 0.5-0.9 to see which is best</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>TrainData <span class="ot">&lt;-</span> df[val_index,]</span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>TrainClasses <span class="ot">&lt;-</span> df[val_index,<span class="dv">31</span>]</span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co"># head(TrainData)</span></span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co"># summary(TrainData)</span></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>TestData <span class="ot">&lt;-</span> df[<span class="sc">-</span>val_index,]</span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a>TestClasses <span class="ot">&lt;-</span> df[<span class="sc">-</span>val_index,<span class="dv">31</span>]</span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="co"># head(TestData)</span></span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a><span class="co"># summary(TestData)</span></span></code></pre></div>
+</div>
+<div id="select-key-variables-using-random-forest"
+class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Select Key Variables
+Using Random Forest</h1>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># Train a Random Forest model</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(df)</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>nobs <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data)</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a><span class="fu">attach</span>(df)</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>form <span class="ot">&lt;-</span> <span class="fu">formula</span>(RESPONSE <span class="sc">~</span> .)</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>target <span class="ot">&lt;-</span> <span class="fu">all.vars</span>(form)[<span class="dv">1</span>]</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">sample</span>(nobs, <span class="fl">0.7</span><span class="sc">*</span>nobs)</span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
+<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a>rf_model <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(<span class="at">formula=</span>form, </span>
+<span id="cb16-12"><a href="#cb16-12" tabindex="-1"></a>                          <span class="at">data=</span>TrainData, </span>
+<span id="cb16-13"><a href="#cb16-13" tabindex="-1"></a>                          <span class="at">ntree=</span><span class="dv">500</span>, <span class="at">mtry=</span><span class="dv">4</span>, </span>
+<span id="cb16-14"><a href="#cb16-14" tabindex="-1"></a>                          <span class="at">sampsize=</span><span class="fl">0.632</span><span class="sc">*</span>nobs,</span>
+<span id="cb16-15"><a href="#cb16-15" tabindex="-1"></a>                          <span class="at">importance=</span><span class="cn">TRUE</span>, </span>
+<span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a>                          <span class="at">localImp=</span><span class="cn">TRUE</span>,</span>
+<span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a>                          <span class="at">na.action=</span>na.roughfix,</span>
+<span id="cb16-18"><a href="#cb16-18" tabindex="-1"></a>                          <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>importance_scores <span class="ot">&lt;-</span> <span class="fu">importance</span>(rf_model)</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="fu">varImpPlot</span>(rf_model)</span></code></pre></div>
+<p><img src="Final_files/figure-html/Get%20variable%20importance-1.png" width="768" /></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="co"># Convert to data frame for easier manipulation</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>importance_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(importance_scores)</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>importance_df<span class="sc">$</span>Variable <span class="ot">&lt;-</span> <span class="fu">rownames</span>(importance_df)</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="co"># Sort by importance (MeanDecreaseGini)</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>importance_df <span class="ot">&lt;-</span> importance_df[<span class="fu">order</span>(<span class="sc">-</span>importance_df<span class="sc">$</span>MeanDecreaseGini),]</span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co"># Print the importance scores</span></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="fu">print</span>(importance_df)</span></code></pre></div>
+<pre><code>##                            0           1 MeanDecreaseAccuracy MeanDecreaseGini
+## CHK_ACCT         15.51925864  7.29433056         1.443124e+01        29.441860
+## AMOUNT            2.91263580  2.87248578         4.208788e+00        27.922767
+## DURATION          4.27838313  8.70263104         9.392541e+00        24.298891
+## AGE              -0.08236202  1.91695285         1.414518e+00        23.359935
+## HISTORY           4.09009349  4.50978856         5.801953e+00        15.706525
+## EMPLOYMENT        1.98022463  0.83831272         1.785771e+00        14.811971
+## SAV_ACCT          5.61244686  1.80117781         4.600282e+00        14.266082
+## INSTALL_RATE     -0.28842399  1.69123715         1.435634e+00        12.069635
+## PRESENT_RESIDENT  0.99883201  1.69603506         2.013569e+00        11.420905
+## JOB              -0.79805460  2.29583700         1.210943e+00         8.407757
+## NUM_CREDITS       1.30256104  1.82595750         2.434454e+00         5.703989
+## NEW_CAR           3.81172343 -0.03254737         2.441998e+00         5.217565
+## OTHER_INSTALL     1.24992382  3.06592773         3.181521e+00         5.068213
+## REAL_ESTATE       0.10855455  3.46896192         2.911892e+00         4.704571
+## OWN_RES           0.72926424  4.51239237         3.788407e+00         4.594375
+## MALE_SINGLE       3.40832475 -0.15099981         1.686939e+00         4.466629
+## TELEPHONE         2.49401390  0.50539871         2.106054e+00         4.421307
+## PROP_UNKN_NONE    0.66749988  2.96018243         2.576874e+00         4.204741
+## RADIO.TV          0.73748109  0.65076825         1.069074e+00         3.621729
+## FURNITURE        -1.61732294  1.12854209         1.156430e-01         3.540572
+## NUM_DEPENDENTS   -0.57315910  1.07730026         6.527292e-01         3.040293
+## EDUCATION         0.80357207  1.58582765         1.805134e+00         2.888500
+## RENT             -0.78117809  1.54404927         8.899354e-01         2.796836
+## USED_CAR         -0.71088813  0.36215885         2.384033e-16         2.330101
+## MALE_MAR_or_WID  -0.77529455  0.64797361        -1.545268e-17         2.329647
+## RETRAINING        0.85635201 -0.05214515         4.782008e-01         2.299642
+## GUARANTOR         0.96427924  3.91480831         3.760825e+00         2.149219
+## CO.APPLICANT      2.33597144 -0.29658318         1.350645e+00         1.973806
+## MALE_DIV          0.63868327 -1.35057796        -6.885734e-01         1.954430
+## FOREIGN           3.62327311  1.23666739         3.231228e+00         1.043857
+##                          Variable
+## CHK_ACCT                 CHK_ACCT
+## AMOUNT                     AMOUNT
+## DURATION                 DURATION
+## AGE                           AGE
+## HISTORY                   HISTORY
+## EMPLOYMENT             EMPLOYMENT
+## SAV_ACCT                 SAV_ACCT
+## INSTALL_RATE         INSTALL_RATE
+## PRESENT_RESIDENT PRESENT_RESIDENT
+## JOB                           JOB
+## NUM_CREDITS           NUM_CREDITS
+## NEW_CAR                   NEW_CAR
+## OTHER_INSTALL       OTHER_INSTALL
+## REAL_ESTATE           REAL_ESTATE
+## OWN_RES                   OWN_RES
+## MALE_SINGLE           MALE_SINGLE
+## TELEPHONE               TELEPHONE
+## PROP_UNKN_NONE     PROP_UNKN_NONE
+## RADIO.TV                 RADIO.TV
+## FURNITURE               FURNITURE
+## NUM_DEPENDENTS     NUM_DEPENDENTS
+## EDUCATION               EDUCATION
+## RENT                         RENT
+## USED_CAR                 USED_CAR
+## MALE_MAR_or_WID   MALE_MAR_or_WID
+## RETRAINING             RETRAINING
+## GUARANTOR               GUARANTOR
+## CO.APPLICANT         CO.APPLICANT
+## MALE_DIV                 MALE_DIV
+## FOREIGN                   FOREIGN</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co"># Set a threshold: for example, mean importance score</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>threshold_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(importance_df<span class="sc">$</span>MeanDecreaseGini)</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="co"># Select important variables</span></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a>important_vars_mean <span class="ot">&lt;-</span> importance_df<span class="sc">$</span>Variable[importance_df<span class="sc">$</span>MeanDecreaseGini <span class="sc">&gt;</span> threshold_mean]</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="co"># Print important variables</span></span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a><span class="fu">print</span>(important_vars_mean) <span class="co"># 12</span></span></code></pre></div>
+<pre><code>##  [1] &quot;CHK_ACCT&quot;         &quot;AMOUNT&quot;           &quot;DURATION&quot;         &quot;AGE&quot;             
+##  [5] &quot;HISTORY&quot;          &quot;EMPLOYMENT&quot;       &quot;SAV_ACCT&quot;         &quot;INSTALL_RATE&quot;    
+##  [9] &quot;PRESENT_RESIDENT&quot; &quot;JOB&quot;</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># Set a percentage threshold: for example, 10% of the maximum importance score</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>percentage_threshold <span class="ot">&lt;-</span> <span class="fl">0.10</span></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>max_importance <span class="ot">&lt;-</span> <span class="fu">max</span>(importance_df<span class="sc">$</span>MeanDecreaseGini)</span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a>threshold_10pc <span class="ot">&lt;-</span> percentage_threshold <span class="sc">*</span> max_importance</span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a><span class="co"># Select important variables</span></span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1"></a>important_vars_10pc <span class="ot">&lt;-</span> importance_df<span class="sc">$</span>Variable[importance_df<span class="sc">$</span>MeanDecreaseGini <span class="sc">&gt;</span> threshold_10pc]</span>
+<span id="cb22-8"><a href="#cb22-8" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a><span class="co"># Print important variables</span></span>
+<span id="cb22-10"><a href="#cb22-10" tabindex="-1"></a><span class="fu">print</span>(important_vars_10pc) <span class="co"># 21</span></span></code></pre></div>
+<pre><code>##  [1] &quot;CHK_ACCT&quot;         &quot;AMOUNT&quot;           &quot;DURATION&quot;         &quot;AGE&quot;             
+##  [5] &quot;HISTORY&quot;          &quot;EMPLOYMENT&quot;       &quot;SAV_ACCT&quot;         &quot;INSTALL_RATE&quot;    
+##  [9] &quot;PRESENT_RESIDENT&quot; &quot;JOB&quot;              &quot;NUM_CREDITS&quot;      &quot;NEW_CAR&quot;         
+## [13] &quot;OTHER_INSTALL&quot;    &quot;REAL_ESTATE&quot;      &quot;OWN_RES&quot;          &quot;MALE_SINGLE&quot;     
+## [17] &quot;TELEPHONE&quot;        &quot;PROP_UNKN_NONE&quot;   &quot;RADIO.TV&quot;         &quot;FURNITURE&quot;       
+## [21] &quot;NUM_DEPENDENTS&quot;</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="co"># Create the formula dynamically</span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>formula <span class="ot">&lt;-</span> <span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">&quot;RESPONSE ~&quot;</span>, <span class="fu">paste</span>(important_vars_mean, <span class="at">collapse =</span> <span class="st">&quot; + &quot;</span>)))</span></code></pre></div>
+</div>
+<div id="comparative-analysis-of-various-methods" class="section level1"
+number="5">
+<h1><span class="header-section-number">5</span> Comparative Analysis of
+Various Methods</h1>
+<p>We try out different methods to see and compare the confusion
+matrix.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>draw_confusion_matrix <span class="ot">&lt;-</span> <span class="cf">function</span>(cm, type) {</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>)))</span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">345</span>), <span class="fu">c</span>(<span class="dv">300</span>, <span class="dv">450</span>), <span class="at">type =</span> <span class="st">&quot;n&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;&quot;</span>, <span class="at">xaxt=</span><span class="st">&#39;n&#39;</span>, <span class="at">yaxt=</span><span class="st">&#39;n&#39;</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a>  <span class="fu">title</span>(<span class="fu">paste</span>(type, <span class="st">&#39;Confusion Matrix&#39;</span>) , <span class="at">cex.main=</span><span class="dv">2</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a>  <span class="co"># create the matrix </span></span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="dv">150</span>, <span class="dv">430</span>, <span class="dv">240</span>, <span class="dv">370</span>, <span class="at">col=</span><span class="st">&#39;#3F97D0&#39;</span>)</span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">195</span>, <span class="dv">435</span>, <span class="st">&#39;0&#39;</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="dv">250</span>, <span class="dv">430</span>, <span class="dv">340</span>, <span class="dv">370</span>, <span class="at">col=</span><span class="st">&#39;#F7AD50&#39;</span>)</span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">295</span>, <span class="dv">435</span>, <span class="st">&#39;1&#39;</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">125</span>, <span class="dv">370</span>, <span class="st">&#39;Predicted&#39;</span>, <span class="at">cex=</span><span class="fl">1.3</span>, <span class="at">srt=</span><span class="dv">90</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">245</span>, <span class="dv">450</span>, <span class="st">&#39;Actual&#39;</span>, <span class="at">cex=</span><span class="fl">1.3</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="dv">150</span>, <span class="dv">305</span>, <span class="dv">240</span>, <span class="dv">365</span>, <span class="at">col=</span><span class="st">&#39;#F7AD50&#39;</span>)</span>
+<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a>  <span class="fu">rect</span>(<span class="dv">250</span>, <span class="dv">305</span>, <span class="dv">340</span>, <span class="dv">365</span>, <span class="at">col=</span><span class="st">&#39;#3F97D0&#39;</span>)</span>
+<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">140</span>, <span class="dv">400</span>, <span class="st">&#39;0&#39;</span>, <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">srt=</span><span class="dv">90</span>)</span>
+<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">140</span>, <span class="dv">335</span>, <span class="st">&#39;1&#39;</span>, <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">srt=</span><span class="dv">90</span>)</span>
+<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a></span>
+<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a>  <span class="co"># add in the cm results </span></span>
+<span id="cb25-21"><a href="#cb25-21" tabindex="-1"></a>  res <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(cm<span class="sc">$</span>table)</span>
+<span id="cb25-22"><a href="#cb25-22" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">195</span>, <span class="dv">400</span>, res[<span class="dv">1</span>], <span class="at">cex=</span><span class="fl">1.6</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">&#39;white&#39;</span>)</span>
+<span id="cb25-23"><a href="#cb25-23" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">195</span>, <span class="dv">335</span>, res[<span class="dv">2</span>], <span class="at">cex=</span><span class="fl">1.6</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">&#39;white&#39;</span>)</span>
+<span id="cb25-24"><a href="#cb25-24" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">295</span>, <span class="dv">400</span>, res[<span class="dv">3</span>], <span class="at">cex=</span><span class="fl">1.6</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">&#39;white&#39;</span>)</span>
+<span id="cb25-25"><a href="#cb25-25" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">295</span>, <span class="dv">335</span>, res[<span class="dv">4</span>], <span class="at">cex=</span><span class="fl">1.6</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">&#39;white&#39;</span>)</span>
+<span id="cb25-26"><a href="#cb25-26" tabindex="-1"></a></span>
+<span id="cb25-27"><a href="#cb25-27" tabindex="-1"></a>  <span class="co"># add in the specifics </span></span>
+<span id="cb25-28"><a href="#cb25-28" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">0</span>), <span class="at">type =</span> <span class="st">&quot;n&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;&quot;</span>, <span class="at">main =</span> <span class="st">&quot;DETAILS&quot;</span>, <span class="at">xaxt=</span><span class="st">&#39;n&#39;</span>, <span class="at">yaxt=</span><span class="st">&#39;n&#39;</span>)</span>
+<span id="cb25-29"><a href="#cb25-29" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">10</span>, <span class="dv">85</span>, <span class="fu">names</span>(cm<span class="sc">$</span>byClass[<span class="dv">1</span>]), <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-30"><a href="#cb25-30" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">10</span>, <span class="dv">70</span>, <span class="fu">round</span>(<span class="fu">as.numeric</span>(cm<span class="sc">$</span>byClass[<span class="dv">1</span>]), <span class="dv">3</span>), <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-31"><a href="#cb25-31" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">30</span>, <span class="dv">85</span>, <span class="fu">names</span>(cm<span class="sc">$</span>byClass[<span class="dv">2</span>]), <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-32"><a href="#cb25-32" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">30</span>, <span class="dv">70</span>, <span class="fu">round</span>(<span class="fu">as.numeric</span>(cm<span class="sc">$</span>byClass[<span class="dv">2</span>]), <span class="dv">3</span>), <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-33"><a href="#cb25-33" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">50</span>, <span class="dv">85</span>, <span class="fu">names</span>(cm<span class="sc">$</span>byClass[<span class="dv">5</span>]), <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-34"><a href="#cb25-34" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">50</span>, <span class="dv">70</span>, <span class="fu">round</span>(<span class="fu">as.numeric</span>(cm<span class="sc">$</span>byClass[<span class="dv">5</span>]), <span class="dv">3</span>), <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-35"><a href="#cb25-35" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">70</span>, <span class="dv">85</span>, <span class="fu">names</span>(cm<span class="sc">$</span>byClass[<span class="dv">6</span>]), <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-36"><a href="#cb25-36" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">70</span>, <span class="dv">70</span>, <span class="fu">round</span>(<span class="fu">as.numeric</span>(cm<span class="sc">$</span>byClass[<span class="dv">6</span>]), <span class="dv">3</span>), <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-37"><a href="#cb25-37" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="fu">names</span>(cm<span class="sc">$</span>byClass[<span class="dv">7</span>]), <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-38"><a href="#cb25-38" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">90</span>, <span class="dv">70</span>, <span class="fu">round</span>(<span class="fu">as.numeric</span>(cm<span class="sc">$</span>byClass[<span class="dv">7</span>]), <span class="dv">3</span>), <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-39"><a href="#cb25-39" tabindex="-1"></a></span>
+<span id="cb25-40"><a href="#cb25-40" tabindex="-1"></a>  <span class="co"># add in the accuracy information </span></span>
+<span id="cb25-41"><a href="#cb25-41" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">30</span>, <span class="dv">35</span>, <span class="fu">names</span>(cm<span class="sc">$</span>overall[<span class="dv">1</span>]), <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-42"><a href="#cb25-42" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">30</span>, <span class="dv">20</span>, <span class="fu">round</span>(<span class="fu">as.numeric</span>(cm<span class="sc">$</span>overall[<span class="dv">1</span>]), <span class="dv">3</span>), <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-43"><a href="#cb25-43" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">70</span>, <span class="dv">35</span>, <span class="fu">names</span>(cm<span class="sc">$</span>overall[<span class="dv">2</span>]), <span class="at">cex=</span><span class="fl">1.2</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb25-44"><a href="#cb25-44" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">70</span>, <span class="dv">20</span>, <span class="fu">round</span>(<span class="fu">as.numeric</span>(cm<span class="sc">$</span>overall[<span class="dv">2</span>]), <span class="dv">3</span>), <span class="at">cex=</span><span class="fl">1.2</span>)</span>
+<span id="cb25-45"><a href="#cb25-45" tabindex="-1"></a>}</span></code></pre></div>
+<div id="logistic-regression" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Logistic
+Regression</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>formula_with_interaction <span class="ot">&lt;-</span> <span class="fu">update</span>(formula, . <span class="sc">~</span> . <span class="sc">+</span> DURATION<span class="sc">:</span>AMOUNT)</span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>formula_with_interaction</span></code></pre></div>
+<pre><code>## RESPONSE ~ CHK_ACCT + AMOUNT + DURATION + AGE + HISTORY + EMPLOYMENT + 
+##     SAV_ACCT + INSTALL_RATE + PRESENT_RESIDENT + JOB + AMOUNT:DURATION</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>log.train <span class="ot">&lt;-</span> <span class="fu">glm</span>(formula_with_interaction, <span class="at">data =</span> TrainData, <span class="at">family =</span> binomial)</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="fu">summary</span>(log.train)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = formula_with_interaction, family = binomial, data = TrainData)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.5739  -0.7260   0.4037   0.7270   2.0393  
+## 
+## Coefficients:
+##                     Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)        8.953e-01  9.565e-01   0.936 0.349222    
+## CHK_ACCT1          6.264e-01  2.478e-01   2.528 0.011483 *  
+## CHK_ACCT2          1.079e+00  4.332e-01   2.492 0.012716 *  
+## CHK_ACCT3          2.032e+00  2.750e-01   7.388 1.49e-13 ***
+## AMOUNT            -2.338e-04  8.343e-05  -2.802 0.005077 ** 
+## DURATION          -4.586e-02  1.473e-02  -3.114 0.001847 ** 
+## AGE                8.160e-03  9.791e-03   0.833 0.404641    
+## HISTORY1          -2.918e-01  5.972e-01  -0.489 0.625164    
+## HISTORY2           7.489e-01  4.603e-01   1.627 0.103743    
+## HISTORY3           8.451e-01  5.305e-01   1.593 0.111152    
+## HISTORY4           1.342e+00  4.915e-01   2.730 0.006338 ** 
+## EMPLOYMENT1       -9.980e-01  5.225e-01  -1.910 0.056144 .  
+## EMPLOYMENT2       -3.520e-01  5.038e-01  -0.699 0.484685    
+## EMPLOYMENT3       -1.135e-01  5.349e-01  -0.212 0.831928    
+## EMPLOYMENT4       -1.822e-01  5.007e-01  -0.364 0.715919    
+## SAV_ACCT1          3.863e-01  3.326e-01   1.162 0.245414    
+## SAV_ACCT2         -1.416e-01  4.396e-01  -0.322 0.747408    
+## SAV_ACCT3          8.775e-01  5.448e-01   1.611 0.107229    
+## SAV_ACCT4          1.132e+00  3.254e-01   3.477 0.000507 ***
+## INSTALL_RATE2     -2.860e-02  3.589e-01  -0.080 0.936490    
+## INSTALL_RATE3     -3.893e-01  3.824e-01  -1.018 0.308681    
+## INSTALL_RATE4     -7.903e-01  3.421e-01  -2.310 0.020865 *  
+## PRESENT_RESIDENT1 -8.403e-01  3.412e-01  -2.463 0.013783 *  
+## PRESENT_RESIDENT2 -4.486e-01  3.889e-01  -1.153 0.248788    
+## PRESENT_RESIDENT3 -4.474e-01  3.364e-01  -1.330 0.183492    
+## JOB1               5.774e-01  7.387e-01   0.782 0.434397    
+## JOB2               4.316e-01  7.123e-01   0.606 0.544531    
+## JOB3               6.022e-01  7.166e-01   0.840 0.400719    
+## AMOUNT:DURATION    4.226e-06  2.284e-06   1.850 0.064259 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 855.21  on 699  degrees of freedom
+## Residual deviance: 651.17  on 671  degrees of freedom
+## AIC: 709.17
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>probs.test <span class="ot">&lt;-</span> <span class="fu">predict</span>(log.train, TestData[, important_vars_mean], <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>RESPONSE.pred <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="at">times=</span> <span class="fu">length</span>(probs.test)) </span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a>RESPONSE.pred[probs.test <span class="sc">&gt;</span> <span class="fl">0.5</span>] <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb30-4"><a href="#cb30-4" tabindex="-1"></a><span class="fu">table</span>(TestData<span class="sc">$</span>RESPONSE, RESPONSE.pred)</span></code></pre></div>
+<pre><code>##    RESPONSE.pred
+##       0   1
+##   0  39  51
+##   1  30 179</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a>RESPONSE.pred <span class="ot">=</span> <span class="fu">as.factor</span>(RESPONSE.pred)</span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a><span class="fu">CrossTable</span>(<span class="at">x =</span> TestData<span class="sc">$</span>RESPONSE, <span class="at">y =</span> RESPONSE.pred, <span class="at">prop.chisq=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## 
+##  
+##    Cell Contents
+## |-------------------------|
+## |                       N |
+## |           N / Row Total |
+## |           N / Col Total |
+## |         N / Table Total |
+## |-------------------------|
+## 
+##  
+## Total Observations in Table:  299 
+## 
+##  
+##                   | RESPONSE.pred 
+## TestData$RESPONSE |         0 |         1 | Row Total | 
+## ------------------|-----------|-----------|-----------|
+##                 0 |        39 |        51 |        90 | 
+##                   |     0.433 |     0.567 |     0.301 | 
+##                   |     0.565 |     0.222 |           | 
+##                   |     0.130 |     0.171 |           | 
+## ------------------|-----------|-----------|-----------|
+##                 1 |        30 |       179 |       209 | 
+##                   |     0.144 |     0.856 |     0.699 | 
+##                   |     0.435 |     0.778 |           | 
+##                   |     0.100 |     0.599 |           | 
+## ------------------|-----------|-----------|-----------|
+##      Column Total |        69 |       230 |       299 | 
+##                   |     0.231 |     0.769 |           | 
+## ------------------|-----------|-----------|-----------|
+## 
+## </code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="co"># confusion matrix</span></span>
+<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a>cm <span class="ot">=</span> <span class="fu">confusionMatrix</span>(RESPONSE.pred, TestData<span class="sc">$</span>RESPONSE)</span>
+<span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a>cm</span></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0  39  30
+##          1  51 179
+##                                           
+##                Accuracy : 0.7291          
+##                  95% CI : (0.6749, 0.7787)
+##     No Information Rate : 0.699           
+##     P-Value [Acc &gt; NIR] : 0.14161         
+##                                           
+##                   Kappa : 0.3104          
+##                                           
+##  Mcnemar&#39;s Test P-Value : 0.02627         
+##                                           
+##             Sensitivity : 0.4333          
+##             Specificity : 0.8565          
+##          Pos Pred Value : 0.5652          
+##          Neg Pred Value : 0.7783          
+##              Prevalence : 0.3010          
+##          Detection Rate : 0.1304          
+##    Detection Prevalence : 0.2308          
+##       Balanced Accuracy : 0.6449          
+##                                           
+##        &#39;Positive&#39; Class : 0               
+## </code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="fu">draw_confusion_matrix</span>(cm, <span class="st">&quot;Logistic Regression&quot;</span>)</span></code></pre></div>
+<p><img src="Final_files/figure-html/Logistic%20Regression-1.png" width="768" /></p>
+</div>
+<div id="decision-tree" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Decision Tree</h2>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a>df.ct <span class="ot">&lt;-</span> <span class="fu">rpart</span>(formula, <span class="at">method=</span><span class="st">&quot;class&quot;</span>, </span>
+<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a>               <span class="at">data =</span> TrainData, <span class="at">control =</span> <span class="fu">rpart.control</span>(<span class="at">minsplit=</span><span class="dv">4</span>,<span class="at">cp=</span><span class="fl">0.05</span>),</span>
+<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a>                 <span class="at">model=</span><span class="cn">TRUE</span>)</span>
+<span id="cb37-4"><a href="#cb37-4" tabindex="-1"></a><span class="fu">summary</span>(df.ct)</span></code></pre></div>
+<pre><code>## Call:
+## rpart(formula = formula, data = TrainData, method = &quot;class&quot;, 
+##     model = TRUE, control = rpart.control(minsplit = 4, cp = 0.05))
+##   n= 700 
+## 
+##           CP nsplit rel error    xerror       xstd
+## 1 0.07857143      0 1.0000000 1.0000000 0.05773503
+## 2 0.05714286      2 0.8428571 0.8952381 0.05584002
+## 3 0.05000000      3 0.7857143 0.8952381 0.05584002
+## 
+## Variable importance
+##         CHK_ACCT         DURATION         SAV_ACCT          HISTORY 
+##               46               18               16                8 
+##           AMOUNT PRESENT_RESIDENT              AGE 
+##                6                3                2 
+## 
+## Node number 1: 700 observations,    complexity param=0.07857143
+##   predicted class=1  expected loss=0.3  P(node) =1
+##     class counts:   210   490
+##    probabilities: 0.300 0.700 
+##   left son=2 (376 obs) right son=3 (324 obs)
+##   Primary splits:
+##       CHK_ACCT splits as  LLRR,       improve=37.59995, (0 missing)
+##       DURATION &lt; 15.5   to the right, improve=12.27433, (0 missing)
+##       HISTORY  splits as  LLRRR,      improve=12.15645, (0 missing)
+##       AMOUNT   &lt; 3914   to the right, improve=10.94354, (0 missing)
+##       SAV_ACCT splits as  LLRRR,      improve=10.60146, (0 missing)
+##   Surrogate splits:
+##       SAV_ACCT         splits as  LLRRR,      agree=0.614, adj=0.167, (0 split)
+##       HISTORY          splits as  LLLLR,      agree=0.599, adj=0.133, (0 split)
+##       PRESENT_RESIDENT splits as  LRLL,       agree=0.569, adj=0.068, (0 split)
+##       DURATION         &lt; 15.5   to the right, agree=0.561, adj=0.052, (0 split)
+##       AGE              &lt; 30.5   to the left,  agree=0.556, adj=0.040, (0 split)
+## 
+## Node number 2: 376 observations,    complexity param=0.07857143
+##   predicted class=1  expected loss=0.4521277  P(node) =0.5371429
+##     class counts:   170   206
+##    probabilities: 0.452 0.548 
+##   left son=4 (167 obs) right son=5 (209 obs)
+##   Primary splits:
+##       DURATION     &lt; 22.5   to the right, improve=12.927030, (0 missing)
+##       AMOUNT       &lt; 3910   to the right, improve= 7.221928, (0 missing)
+##       HISTORY      splits as  LLRRR,      improve= 6.096718, (0 missing)
+##       SAV_ACCT     splits as  LLRRR,      improve= 6.094029, (0 missing)
+##       INSTALL_RATE splits as  RRLL,       improve= 3.425270, (0 missing)
+##   Surrogate splits:
+##       AMOUNT       &lt; 2805.5 to the right, agree=0.734, adj=0.401, (0 split)
+##       HISTORY      splits as  LLRLR,      agree=0.609, adj=0.120, (0 split)
+##       JOB          splits as  RRRL,       agree=0.564, adj=0.018, (0 split)
+##       SAV_ACCT     splits as  RLRRR,      agree=0.561, adj=0.012, (0 split)
+##       INSTALL_RATE splits as  RLRR,       agree=0.561, adj=0.012, (0 split)
+## 
+## Node number 3: 324 observations
+##   predicted class=1  expected loss=0.1234568  P(node) =0.4628571
+##     class counts:    40   284
+##    probabilities: 0.123 0.877 
+## 
+## Node number 4: 167 observations,    complexity param=0.05714286
+##   predicted class=0  expected loss=0.4011976  P(node) =0.2385714
+##     class counts:   100    67
+##    probabilities: 0.599 0.401 
+##   left son=8 (115 obs) right son=9 (52 obs)
+##   Primary splits:
+##       SAV_ACCT     splits as  LRRRR,      improve=6.928484, (0 missing)
+##       DURATION     &lt; 31.5   to the right, improve=2.868989, (0 missing)
+##       INSTALL_RATE splits as  RRLL,       improve=2.815792, (0 missing)
+##       AMOUNT       &lt; 1381.5 to the left,  improve=2.612639, (0 missing)
+##       AGE          &lt; 29.5   to the left,  improve=2.468387, (0 missing)
+##   Surrogate splits:
+##       DURATION &lt; 57     to the left,  agree=0.701, adj=0.038, (0 split)
+## 
+## Node number 5: 209 observations
+##   predicted class=1  expected loss=0.3349282  P(node) =0.2985714
+##     class counts:    70   139
+##    probabilities: 0.335 0.665 
+## 
+## Node number 8: 115 observations
+##   predicted class=0  expected loss=0.3043478  P(node) =0.1642857
+##     class counts:    80    35
+##    probabilities: 0.696 0.304 
+## 
+## Node number 9: 52 observations
+##   predicted class=1  expected loss=0.3846154  P(node) =0.07428571
+##     class counts:    20    32
+##    probabilities: 0.385 0.615</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="co"># Plotting initial decision tree</span></span>
+<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
+<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a><span class="fu">rpart.plot</span>(df.ct, <span class="at">cex =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="Final_files/figure-html/Initial%20Tree-1.png" width="768" /></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="co"># Each node shows</span></span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="co"># - the predicted class (bad or good credit),</span></span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a><span class="co"># - the predicted probability of good credit,</span></span>
+<span id="cb40-4"><a href="#cb40-4" tabindex="-1"></a><span class="co"># - the percentage of observations in the node.</span></span>
+<span id="cb40-5"><a href="#cb40-5" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="#cb40-6" tabindex="-1"></a><span class="co"># complexity table</span></span>
+<span id="cb40-7"><a href="#cb40-7" tabindex="-1"></a><span class="fu">printcp</span>(df.ct) </span></code></pre></div>
+<pre><code>## 
+## Classification tree:
+## rpart(formula = formula, data = TrainData, method = &quot;class&quot;, 
+##     model = TRUE, control = rpart.control(minsplit = 4, cp = 0.05))
+## 
+## Variables actually used in tree construction:
+## [1] CHK_ACCT DURATION SAV_ACCT
+## 
+## Root node error: 210/700 = 0.3
+## 
+## n= 700 
+## 
+##         CP nsplit rel error  xerror     xstd
+## 1 0.078571      0   1.00000 1.00000 0.057735
+## 2 0.057143      2   0.84286 0.89524 0.055840
+## 3 0.050000      3   0.78571 0.89524 0.055840</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="co"># Resub. Error, CV Error, min(CV Error)+1SE</span></span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="fu">par</span>(<span class="at">pty=</span><span class="st">&quot;s&quot;</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a><span class="fu">plotcp</span>(df.ct)</span>
+<span id="cb42-4"><a href="#cb42-4" tabindex="-1"></a><span class="fu">with</span>(df.ct, {</span>
+<span id="cb42-5"><a href="#cb42-5" tabindex="-1"></a>  <span class="fu">lines</span>(cptable[,<span class="dv">2</span>]<span class="sc">+</span><span class="dv">1</span>,cptable[,<span class="dv">3</span>],<span class="at">type=</span><span class="st">&quot;b&quot;</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
+<span id="cb42-6"><a href="#cb42-6" tabindex="-1"></a>  <span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="dv">1</span>, <span class="fu">c</span>(<span class="st">&quot;Resub. Error&quot;</span>,<span class="st">&quot;CV Error&quot;</span>,<span class="st">&quot;min(CV Error)+1SE&quot;</span>),</span>
+<span id="cb42-7"><a href="#cb42-7" tabindex="-1"></a>  <span class="at">lty=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;black&quot;</span>,<span class="st">&quot;blue&quot;</span>),<span class="at">bty=</span><span class="st">&quot;n&quot;</span>,<span class="at">cex=</span><span class="fl">0.8</span>)</span>
+<span id="cb42-8"><a href="#cb42-8" tabindex="-1"></a>  }) </span></code></pre></div>
+<p><img src="Final_files/figure-html/Initial%20Tree-2.png" width="768" /></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="co"># Deciding where to prune</span></span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>cp <span class="ot">&lt;-</span> df.ct<span class="sc">$</span>cptable</span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a>opt <span class="ot">&lt;-</span> <span class="fu">which.min</span>(df.ct<span class="sc">$</span>cptable[, <span class="st">&quot;xerror&quot;</span>])</span>
+<span id="cb43-4"><a href="#cb43-4" tabindex="-1"></a>r <span class="ot">&lt;-</span> cp[, <span class="dv">4</span>][opt] <span class="sc">+</span> cp[, <span class="dv">5</span>][opt]</span>
+<span id="cb43-5"><a href="#cb43-5" tabindex="-1"></a>rmin <span class="ot">&lt;-</span> <span class="fu">min</span>(<span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(cp)[<span class="dv">1</span>])[cp[, <span class="dv">4</span>] <span class="sc">&lt;</span> r])</span>
+<span id="cb43-6"><a href="#cb43-6" tabindex="-1"></a>cp0 <span class="ot">&lt;-</span> cp[rmin, <span class="dv">1</span>]</span>
+<span id="cb43-7"><a href="#cb43-7" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;size chosen was&quot;</span>, cp[rmin, <span class="dv">2</span>] <span class="sc">+</span> <span class="dv">1</span>, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## size chosen was 3</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="co"># pruned tree</span></span>
+<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>df.prune<span class="ot">&lt;-</span><span class="fu">prune</span>(df.ct, <span class="at">cp =</span> <span class="fl">1.01</span> <span class="sc">*</span> cp0)</span>
+<span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a><span class="fu">summary</span>(df.prune)</span></code></pre></div>
+<pre><code>## Call:
+## rpart(formula = formula, data = TrainData, method = &quot;class&quot;, 
+##     model = TRUE, control = rpart.control(minsplit = 4, cp = 0.05))
+##   n= 700 
+## 
+##           CP nsplit rel error    xerror       xstd
+## 1 0.07857143      0 1.0000000 1.0000000 0.05773503
+## 2 0.05771429      2 0.8428571 0.8952381 0.05584002
+## 
+## Variable importance
+##         CHK_ACCT         DURATION          HISTORY         SAV_ACCT 
+##               50               20                9                9 
+##           AMOUNT PRESENT_RESIDENT              AGE 
+##                7                3                2 
+## 
+## Node number 1: 700 observations,    complexity param=0.07857143
+##   predicted class=1  expected loss=0.3  P(node) =1
+##     class counts:   210   490
+##    probabilities: 0.300 0.700 
+##   left son=2 (376 obs) right son=3 (324 obs)
+##   Primary splits:
+##       CHK_ACCT splits as  LLRR,       improve=37.59995, (0 missing)
+##       DURATION &lt; 15.5   to the right, improve=12.27433, (0 missing)
+##       HISTORY  splits as  LLRRR,      improve=12.15645, (0 missing)
+##       AMOUNT   &lt; 3914   to the right, improve=10.94354, (0 missing)
+##       SAV_ACCT splits as  LLRRR,      improve=10.60146, (0 missing)
+##   Surrogate splits:
+##       SAV_ACCT         splits as  LLRRR,      agree=0.614, adj=0.167, (0 split)
+##       HISTORY          splits as  LLLLR,      agree=0.599, adj=0.133, (0 split)
+##       PRESENT_RESIDENT splits as  LRLL,       agree=0.569, adj=0.068, (0 split)
+##       DURATION         &lt; 15.5   to the right, agree=0.561, adj=0.052, (0 split)
+##       AGE              &lt; 30.5   to the left,  agree=0.556, adj=0.040, (0 split)
+## 
+## Node number 2: 376 observations,    complexity param=0.07857143
+##   predicted class=1  expected loss=0.4521277  P(node) =0.5371429
+##     class counts:   170   206
+##    probabilities: 0.452 0.548 
+##   left son=4 (167 obs) right son=5 (209 obs)
+##   Primary splits:
+##       DURATION     &lt; 22.5   to the right, improve=12.927030, (0 missing)
+##       AMOUNT       &lt; 3910   to the right, improve= 7.221928, (0 missing)
+##       HISTORY      splits as  LLRRR,      improve= 6.096718, (0 missing)
+##       SAV_ACCT     splits as  LLRRR,      improve= 6.094029, (0 missing)
+##       INSTALL_RATE splits as  RRLL,       improve= 3.425270, (0 missing)
+##   Surrogate splits:
+##       AMOUNT       &lt; 2805.5 to the right, agree=0.734, adj=0.401, (0 split)
+##       HISTORY      splits as  LLRLR,      agree=0.609, adj=0.120, (0 split)
+##       JOB          splits as  RRRL,       agree=0.564, adj=0.018, (0 split)
+##       SAV_ACCT     splits as  RLRRR,      agree=0.561, adj=0.012, (0 split)
+##       INSTALL_RATE splits as  RLRR,       agree=0.561, adj=0.012, (0 split)
+## 
+## Node number 3: 324 observations
+##   predicted class=1  expected loss=0.1234568  P(node) =0.4628571
+##     class counts:    40   284
+##    probabilities: 0.123 0.877 
+## 
+## Node number 4: 167 observations
+##   predicted class=0  expected loss=0.4011976  P(node) =0.2385714
+##     class counts:   100    67
+##    probabilities: 0.599 0.401 
+## 
+## Node number 5: 209 observations
+##   predicted class=1  expected loss=0.3349282  P(node) =0.2985714
+##     class counts:    70   139
+##    probabilities: 0.335 0.665</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="fu">rpart.plot</span>(df.prune, <span class="at">cex =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="Final_files/figure-html/Pruned%20Tree-1.png" width="768" /></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a>df.pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(df.prune, TestData[, important_vars_mean], <span class="at">type=</span><span class="st">&quot;class&quot;</span>)</span>
+<span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="#cb48-3" tabindex="-1"></a><span class="fu">CrossTable</span>(<span class="at">x =</span> TestData<span class="sc">$</span>RESPONSE, <span class="at">y =</span> df.pred, <span class="at">prop.chisq=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## 
+##  
+##    Cell Contents
+## |-------------------------|
+## |                       N |
+## |           N / Row Total |
+## |           N / Col Total |
+## |         N / Table Total |
+## |-------------------------|
+## 
+##  
+## Total Observations in Table:  299 
+## 
+##  
+##                   | df.pred 
+## TestData$RESPONSE |         0 |         1 | Row Total | 
+## ------------------|-----------|-----------|-----------|
+##                 0 |        34 |        56 |        90 | 
+##                   |     0.378 |     0.622 |     0.301 | 
+##                   |     0.486 |     0.245 |           | 
+##                   |     0.114 |     0.187 |           | 
+## ------------------|-----------|-----------|-----------|
+##                 1 |        36 |       173 |       209 | 
+##                   |     0.172 |     0.828 |     0.699 | 
+##                   |     0.514 |     0.755 |           | 
+##                   |     0.120 |     0.579 |           | 
+## ------------------|-----------|-----------|-----------|
+##      Column Total |        70 |       229 |       299 | 
+##                   |     0.234 |     0.766 |           | 
+## ------------------|-----------|-----------|-----------|
+## 
+## </code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a>cm <span class="ot">=</span> <span class="fu">confusionMatrix</span>(df.pred, TestData<span class="sc">$</span>RESPONSE)</span>
+<span id="cb50-2"><a href="#cb50-2" tabindex="-1"></a>cm</span></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0  34  36
+##          1  56 173
+##                                           
+##                Accuracy : 0.6923          
+##                  95% CI : (0.6366, 0.7442)
+##     No Information Rate : 0.699           
+##     P-Value [Acc &gt; NIR] : 0.6265          
+##                                           
+##                   Kappa : 0.2194          
+##                                           
+##  Mcnemar&#39;s Test P-Value : 0.0476          
+##                                           
+##             Sensitivity : 0.3778          
+##             Specificity : 0.8278          
+##          Pos Pred Value : 0.4857          
+##          Neg Pred Value : 0.7555          
+##              Prevalence : 0.3010          
+##          Detection Rate : 0.1137          
+##    Detection Prevalence : 0.2341          
+##       Balanced Accuracy : 0.6028          
+##                                           
+##        &#39;Positive&#39; Class : 0               
+## </code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" tabindex="-1"></a><span class="fu">draw_confusion_matrix</span>(cm, <span class="st">&quot;Decision Tree&quot;</span>)</span></code></pre></div>
+<p><img src="Final_files/figure-html/Pruned%20Tree-2.png" width="768" />
+### General Caret Function</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a>methods <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;nnet&quot;</span>, <span class="st">&quot;rpart&quot;</span> , <span class="st">&quot;adaboost&quot;</span>, <span class="st">&quot;accuracy&quot;</span>, <span class="st">&quot;rf&quot;</span>)</span>
+<span id="cb53-2"><a href="#cb53-2" tabindex="-1"></a>samplings <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;up&quot;</span>, <span class="st">&quot;down&quot;</span>, <span class="st">&quot;smote&quot;</span>, <span class="st">&quot;rose&quot;</span>)</span>
+<span id="cb53-3"><a href="#cb53-3" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="#cb53-4" tabindex="-1"></a>caret_fit <span class="ot">=</span> <span class="cf">function</span>(method, sample) {</span>
+<span id="cb53-5"><a href="#cb53-5" tabindex="-1"></a>  modelFit <span class="ot">&lt;-</span> caret<span class="sc">::</span><span class="fu">train</span>(formula, <span class="co"># choose variables here</span></span>
+<span id="cb53-6"><a href="#cb53-6" tabindex="-1"></a>              <span class="at">data=</span>TrainData,</span>
+<span id="cb53-7"><a href="#cb53-7" tabindex="-1"></a>              <span class="at">method=</span> method, <span class="co"># nnet rpart adaboost accuracy rf (randomforest) ranger etc</span></span>
+<span id="cb53-8"><a href="#cb53-8" tabindex="-1"></a>              <span class="at">preProcess=</span><span class="st">&quot;range&quot;</span>,</span>
+<span id="cb53-9"><a href="#cb53-9" tabindex="-1"></a>              <span class="at">tune_length =</span> <span class="dv">10</span>,</span>
+<span id="cb53-10"><a href="#cb53-10" tabindex="-1"></a>              <span class="at">trace=</span><span class="cn">FALSE</span>,</span>
+<span id="cb53-11"><a href="#cb53-11" tabindex="-1"></a>              <span class="at">trControl=</span><span class="fu">trainControl</span>(<span class="at">method=</span><span class="st">&quot;cv&quot;</span>, <span class="at">sampling =</span> sample)) <span class="co"># 10-fold cv, &quot;repeated cv&quot; , need add no. of repeats / sampling up down smote</span></span>
+<span id="cb53-12"><a href="#cb53-12" tabindex="-1"></a>  </span>
+<span id="cb53-13"><a href="#cb53-13" tabindex="-1"></a>  modelFit</span>
+<span id="cb53-14"><a href="#cb53-14" tabindex="-1"></a>  </span>
+<span id="cb53-15"><a href="#cb53-15" tabindex="-1"></a>  cm <span class="ot">=</span> <span class="fu">confusionMatrix</span>(<span class="fu">predict</span>(modelFit, TestData[,<span class="sc">-</span><span class="dv">31</span>]), TestClasses)</span>
+<span id="cb53-16"><a href="#cb53-16" tabindex="-1"></a>  cm</span>
+<span id="cb53-17"><a href="#cb53-17" tabindex="-1"></a>  <span class="fu">draw_confusion_matrix</span>(cm, <span class="fu">paste</span>(method, <span class="st">&quot; (Sampling = &quot;</span>, sample, <span class="st">&quot;)&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>))</span>
+<span id="cb53-18"><a href="#cb53-18" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="random-forest" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Random Forest</h2>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> samplings) {<span class="fu">caret_fit</span>(<span class="st">&quot;rf&quot;</span>, i)}</span></code></pre></div>
+<p><img src="Final_files/figure-html/Random%20Forest-1.png" width="768" /></p>
+<pre><code>## Warning: package &#39;themis&#39; was built under R version 4.2.3</code></pre>
+<pre><code>## Loading required package: recipes</code></pre>
+<pre><code>## Warning: package &#39;recipes&#39; was built under R version 4.2.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;recipes&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:stringr&#39;:
+## 
+##     fixed</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     step</code></pre>
+<p><img src="Final_files/figure-html/Random%20Forest-2.png" width="768" /></p>
+<pre><code>## Warning: package &#39;ROSE&#39; was built under R version 4.2.3</code></pre>
+<pre><code>## Loaded ROSE 0.0-4</code></pre>
+<p><img src="Final_files/figure-html/Random%20Forest-3.png" width="768" /><img src="Final_files/figure-html/Random%20Forest-4.png" width="768" /></p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a><span class="co"># Ranger package is also Random Forest)</span></span>
+<span id="cb63-2"><a href="#cb63-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> samplings) {<span class="fu">caret_fit</span>(<span class="st">&quot;ranger&quot;</span>, i)}</span></code></pre></div>
+<p><img src="Final_files/figure-html/Ranger-1.png" width="768" /><img src="Final_files/figure-html/Ranger-2.png" width="768" /><img src="Final_files/figure-html/Ranger-3.png" width="768" /><img src="Final_files/figure-html/Ranger-4.png" width="768" /></p>
+</div>
+<div id="k-nearest-neighbours" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> K-Nearest
+Neighbours</h2>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> samplings) {<span class="fu">caret_fit</span>(<span class="st">&quot;kknn&quot;</span>, i)}</span></code></pre></div>
+<p><img src="Final_files/figure-html/KNN-1.png" width="768" /><img src="Final_files/figure-html/KNN-2.png" width="768" /><img src="Final_files/figure-html/KNN-3.png" width="768" /><img src="Final_files/figure-html/KNN-4.png" width="768" /></p>
+</div>
+<div id="neural-network" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Neural Network</h2>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> samplings) {<span class="fu">caret_fit</span>(<span class="st">&quot;nnet&quot;</span>, i)}</span></code></pre></div>
+<p><img src="Final_files/figure-html/NNet-1.png" width="768" /><img src="Final_files/figure-html/NNet-2.png" width="768" /><img src="Final_files/figure-html/NNet-3.png" width="768" /><img src="Final_files/figure-html/NNet-4.png" width="768" /></p>
+</div>
+<div id="adaboost" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Adaboost</h2>
+</div>
+</div>
+</div>
+
+   
+   
+            
+      
+
+  <script>
+    $(document).ready(function () {
+
+			
+ 		
+	    });
+  </script>
+
+
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  
+</body>
+</html>
